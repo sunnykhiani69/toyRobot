@@ -8,7 +8,7 @@
     "messages": {
         "default": "Please start by issuing a PLACE command like PLACE 0,0,NORTH",
         "placeFall": "Please place the robot where it will not fall",
-        "message3": "hi!",
+        "noInitCommand": "You need to PLACE the robot first like PLACE 0,0,NORTH",
         "message4": "blah"
     },
     "robot": {

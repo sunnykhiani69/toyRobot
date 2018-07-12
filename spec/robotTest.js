@@ -26,12 +26,21 @@ describe('The Toy Robot', function() {
     });
 
     it('should be undefined before PLACE command', function() {
-        var oPosition = theRobot._getRobotPosition();
-        expect(oPosition.x === undefined &&
-            oPosition.y === undefined &&
-            oPosition.f === undefined).toBe(true);
+        var rPosition = theRobot._getRobotPosition();
+        expect(rPosition.x === undefined &&
+            rPosition.y === undefined &&
+            rPosition.f === undefined).toBe(true);
         console.log('condition robot is undefined');
     });
+
+    it(
+        'should not accept MOVE command before initial PLACE command',
+        function() {
+            expect(theRobot.move()).toEqual(new Error(
+                messenger.getMessage({
+                    msg: 'noIniitCommand'
+                })));
+        });
 
 });
 
