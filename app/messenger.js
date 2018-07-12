@@ -3,7 +3,7 @@
 module.exports = Messenger;
 
 /**
- * The messenger class constructor
+ * The messenger class constructor, it is primarily used to parse messages
  * @constructor
  */
 

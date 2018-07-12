@@ -7,8 +7,13 @@
     },
     "messages": {
         "default": "Please start by issuing a PLACE command like PLACE 0,0,NORTH",
-        "message2": "hello",
+        "placeFall": "Please place the robot where it will not fall",
         "message3": "hi!",
         "message4": "blah"
+    },
+    "robot": {
+        "rCommands": [ "PLACE", "MOVE", "LEFT", "RIGHT", "REPORT" ],
+        "rInit": "PLACE",
+        "rDirections": [ "NORTH", "EAST", "WEST", "SOUTH" ]
     }
 }

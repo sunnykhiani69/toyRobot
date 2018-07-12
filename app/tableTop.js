@@ -3,7 +3,7 @@
 module.exports = TableTop;
 
 /**
- * The TableTop class constructor
+ * The TableTop class constructor, it defines the 5x5 table top
  * @constructor
  */
 function TableTop() {
@@ -16,7 +16,7 @@ var prototype = {
      * Check if robot has fallen off the table
      * @return {Boolean}
      */
-    isFallen: function(x, y) {
+    isFalling: function(x, y) {
         if (
             (x > config.tableTop.startX + config.tableTop.lengthX - 1) || // greater then 4 & lesser then 0
             (x < config.tableTop.startX) ||

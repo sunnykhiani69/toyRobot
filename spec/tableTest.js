@@ -29,7 +29,7 @@ describe('TableTop', function() {
 
     function outX(x, y) {
         it('should be true if point x is out of table', function() {
-            expect(tableTop.isFallen(x, y)).toBe(true);
+            expect(tableTop.isFalling(x, y)).toBe(true);
         });
     }
 
@@ -47,7 +47,7 @@ describe('TableTop', function() {
 
     function inX(x, y) {
         it('should be false if point x is out of table', function() {
-            expect(tableTop.isFallen(x, y)).toBe(false);
+            expect(tableTop.isFalling(x, y)).toBe(false);
         });
     }
 
@@ -65,7 +65,7 @@ describe('TableTop', function() {
 
     function outY(x, y) {
         it('should be true if point y is out of table', function() {
-            expect(tableTop.isFallen(x, y)).toBe(true);
+            expect(tableTop.isFalling(x, y)).toBe(true);
         });
     }
 
@@ -83,7 +83,7 @@ describe('TableTop', function() {
 
     function inY(x, y) {
         it('should be false if point y is out of table', function() {
-            expect(tableTop.isFallen(x, y)).toBe(false);
+            expect(tableTop.isFalling(x, y)).toBe(false);
         });
     }
 
