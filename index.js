@@ -1,4 +1,4 @@
-'use stroct';
+'use strict';
 
 /**
  * Main application start file
