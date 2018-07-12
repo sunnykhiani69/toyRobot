@@ -4,6 +4,9 @@
   "description": "toy robot",
   "main": "index.js",
   "dependencies": {
+    "editorconfig": "^0.15.0",
+    "eslint": "^5.1.0",
+    "jshint": "^2.9.5",
     "noode": "^0.0.63"
   },
   "devDependencies": {},
