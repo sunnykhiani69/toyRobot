@@ -1,0 +1,27 @@
+{
+  "name": "toyrobot",
+  "version": "1.0.0",
+  "description": "toy robot",
+  "main": "index.js",
+  "dependencies": {
+    "noode": "^0.0.63"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "PLACE 0,0,NORTH"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnykhiani69/toyRobot.git"
+  },
+  "keywords": [
+    "robot",
+    "toy"
+  ],
+  "author": "Sunny Khiani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunnykhiani69/toyRobot/issues"
+  },
+  "homepage": "https://github.com/sunnykhiani69/toyRobot#readme"
+}
