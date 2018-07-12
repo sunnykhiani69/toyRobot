@@ -31,6 +31,3 @@ var prototype = {
 
 Messenger.prototype = Object.create(prototype);
 Messenger.prototype.constructor = Messenger;
-
-
-
