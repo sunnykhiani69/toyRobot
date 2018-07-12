@@ -74,7 +74,7 @@ describe('TableTop', function() {
      */
     for ( x = config.get('tableTop.startY'); x < config.get('tableTop.lengthY'); ++x) {
         for ( i = 0; i < YOutOfTable.length; ++i) {
-            outX(YOutOfTable[i], y);
+            outY(YOutOfTable[i], y);
             console.log('y is ', YOutOfTable[i]);
             //console.count('test number');
         }
@@ -85,7 +85,7 @@ describe('TableTop', function() {
      */
     for ( x = config.get('tableTop.startY'); x < config.get('tableTop.lengthY'); ++x) {
         for ( i = 0; i < YInTable.length; ++i) {
-            inX(YInTable[i], y);
+            inY(YInTable[i], y);
             console.log('y is ', YInTable[i]);
             //console.count('test number');
         }
