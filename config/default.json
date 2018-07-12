@@ -4,5 +4,11 @@
         "startY": 0,
         "lengthX": 5,
         "lengthY": 5
+    },
+    "messages": {
+        "default": "Please start by issuing a PLACE command like PLACE 0,0,NORTH",
+        "message2": "hello",
+        "message3": "hi!",
+        "message4": "blah"
     }
 }

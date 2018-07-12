@@ -3,7 +3,7 @@
 module.exports = TableTop;
 
 /**
- * The TableTop class, constructor
+ * The TableTop class constructor
  * @constructor
  */
 function TableTop() {
@@ -18,10 +18,10 @@ var prototype = {
      */
     isFallen: function(x, y) {
         if (
-            (x > (config.get('tableTop.startX') + (config.get('tableTop.lengthX') - 1))) || // greater then 4 & lesser then 0
-            (x < config.get('tableTop.startX')) ||
-            (y > (config.get('tableTop.startY') + (config.get('tableTop.lengthY') - 1))) ||
-            (y < config.get('tableTop.startY'))
+            (x > config.tableTop.startX + config.tableTop.lengthX - 1) || // greater then 4 & lesser then 0
+            (x < config.tableTop.startX) ||
+            (y > config.tableTop.startY + config.tableTop.lengthY - 1) ||
+            (y < config.tableTop.startY)
         ) {
             return true;
         } else
