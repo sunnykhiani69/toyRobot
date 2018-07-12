@@ -18,10 +18,10 @@ var prototype = {
      */
     isFallen: function(x, y) {
         if (
-            (x > (config.get('table.startX') + (config.get('table.lengthX') - 1))) ||
-            (x < config.get('table.startX')) ||
-            (y > (config.get('table.startY') + (config.get('table.lengthY') - 1))) ||
-            (y < config.get('table.startY'))
+            (x > (config.get('tableTop.startX') + (config.get('tableTop.lengthX') - 1))) ||
+            (x < config.get('tableTop.startX')) ||
+            (y > (config.get('tableTop.startY') + (config.get('tableTop.lengthY') - 1))) ||
+            (y < config.get('tableTop.startY'))
         ) {
             return true;
         } else
