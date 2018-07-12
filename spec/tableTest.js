@@ -31,12 +31,28 @@ describe('TableTop', function() {
         });
     }
 
+    function outY(x, y) {
+        it('should be true if point y is out of table', function() {
+            expect(tableTop.isFallen(x, y)).toBe(true);
+        });
+    }
+
+    function inY(x, y) {
+        it('should be false if point y is out of table', function() {
+            expect(tableTop.isFallen(x, y)).toBe(false);
+        });
+    }
+
+    var x;
+    var i;
+    var y;
+
     /**
      * X is out of the table
      */
-    for (var x = config.get('tableTop.startX'); x < config.get('tableTop.lengthX'); ++x) {
-        for (var i = 0; i < XOutOfTable.length; ++i) {
-            outX(x, XOutOfTable[i]);
+    for ( x = config.get('tableTop.startX'); x < config.get('tableTop.lengthX'); ++x) {
+        for ( i = 0; i < XOutOfTable.length; ++i) {
+            outX(XOutOfTable[i], y);
             console.log('x is ', XOutOfTable[i]);
             //console.count('test number');
         }
@@ -45,10 +61,32 @@ describe('TableTop', function() {
     /**
      * X is on the table
      */
-    for (var x = config.get('tableTop.startX'); x < config.get('tableTop.lengthX'); ++x) {
-        for (var i = 0; i < XInTable.length; ++i) {
-            inX(x, XInTable[i]);
+    for ( x = config.get('tableTop.startX'); x < config.get('tableTop.lengthX'); ++x) {
+        for ( i = 0; i < XInTable.length; ++i) {
+            inX(XInTable[i], y);
             console.log('x is ', XInTable[i]);
+            //console.count('test number');
+        }
+    }
+
+    /**
+     * Y is out of the table
+     */
+    for ( x = config.get('tableTop.startY'); x < config.get('tableTop.lengthY'); ++x) {
+        for ( i = 0; i < YOutOfTable.length; ++i) {
+            outX(YOutOfTable[i], y);
+            console.log('y is ', YOutOfTable[i]);
+            //console.count('test number');
+        }
+    }
+
+    /**
+     * Y is on the table
+     */
+    for ( x = config.get('tableTop.startY'); x < config.get('tableTop.lengthY'); ++x) {
+        for ( i = 0; i < YInTable.length; ++i) {
+            inX(YInTable[i], y);
+            console.log('y is ', YInTable[i]);
             //console.count('test number');
         }
     }
