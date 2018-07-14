@@ -25,7 +25,23 @@ var prototype = {
             return config.get('messages.default');
         }
 
-        return mData;
+        if (!config.messages[mData.msg]){
+            return config.get('messages.default');
+        }
+
+        return this._constructMessage(mData);
+    },
+
+    _constructMessage: function(mData) {
+        var mCombined = Object.assign({}, mData, config.messages),
+            str;
+
+        str = config.messages[mCombined.msg].replace(
+            /{(\w+)}/g,
+            function(match, p) {
+                return mCombined[p];
+            });
+        return str;
     }
 };
 

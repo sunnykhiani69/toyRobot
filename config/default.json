@@ -6,10 +6,12 @@
         "lengthY": 5
     },
     "messages": {
-        "default": "Please start by issuing a PLACE command like PLACE 0,0,NORTH",
+        "default": "I do not understand that command",
         "placeFall": "Please place the robot where it will not fall",
         "noInitCommand": "You need to PLACE the robot first like PLACE 0,0,NORTH",
-        "message4": "blah"
+        "welcome": "Please start by issuing a PLACE command like PLACE 0,0,NORTH",
+        "fileNotFound": "The file is not found",
+        "robotPosition": "The robots position is {x} {y} {f}"
     },
     "robot": {
         "rCommands": [ "PLACE", "MOVE", "LEFT", "RIGHT", "REPORT" ],

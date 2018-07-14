@@ -116,6 +116,7 @@ var prototype = {
 
             } else {
                 return this._messenger.getMessage({
+                    msg: 'robotPosition',
                     x: rPosition.x,
                     y: rPosition.y,
                     f: rPosition.f
@@ -149,7 +150,6 @@ var prototype = {
                 0 : this._robotCurrentPosition.f + 1;
         return this;
     },
-
 
     // validate place command coordinates
     _validateInput: function(x, y, f) {
@@ -220,6 +220,10 @@ var prototype = {
             y: this._robotCurrentPosition.y,
             f: this._config.rDirections[this._robotCurrentPosition.f]
         };
+    },
+
+    getMessenger: function() {
+        return this._messenger;
     },
 
 };

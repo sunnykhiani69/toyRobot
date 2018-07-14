@@ -4,5 +4,5 @@
  * Main application start file
  */
 
-var app = require('/nodejs/toyRobot/app/toyRobotApp');
+var app = require('./app/theRobotApp');
 app.run();
