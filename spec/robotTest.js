@@ -13,7 +13,6 @@ var TheRobot = require('./../app/theRobot');
 describe('The Toy Robot', function() {
     var theRobot;
     var messenger;
-    var x, y, f;
 
     beforeAll(function() {
         messenger = new Messenger(config.messenger);
