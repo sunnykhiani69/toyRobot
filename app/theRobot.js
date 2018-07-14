@@ -30,12 +30,13 @@ var prototype = {
     * @return robot position or error
     */
 
-    place: function(x,y,f) {
+    // robot place function
+    place: function(x ,y ,f) {
 
         var arg ={};
 
         try {
-            arg = this._vaidateInput(x,y,f);
+            arg = this._validateInput(x,y,f);
         } catch (e) {
 
             return e; }
@@ -57,6 +58,7 @@ var prototype = {
         return this;
     },
 
+    // robot move function
     move: function(){
         var x,y,f;
 
@@ -68,11 +70,9 @@ var prototype = {
             );
         }
 
-        this._robotCurrentPosition = {
-            x: x,
-            y: y,
-            f: f
-        };
+        x = this._robotCurrentPosition.x;
+        y = this._robotCurrentPosition.y;
+        f = this._robotCurrentPosition.f;
 
         // update x & y correctly
 
@@ -99,6 +99,95 @@ var prototype = {
 
     },
 
+    // this is the report function
+
+    report: function(msgObj){
+        if (!msgObj) {
+            var rPosition = this._getRobotPosition();
+
+            if (rPosition.x === undefined &&
+                rPosition.y === undefined &&
+                rPosition.f === undefined) {
+                return this._messenger.getMessage({
+                    x: rPosition.x,
+                    y: rPosition.y,
+                    f: rPosition.f
+                });
+
+            } else {
+                return this._messenger.getMessage({
+                    x: rPosition.x,
+                    y: rPosition.y,
+                    f: rPosition.f
+                });
+            }
+        } else
+            return this._messenger.getMessage(msgObj);
+
+    },
+
+    // validate place command coordinates
+    _validateInput: function(x, y, f) {
+
+        if (!f) {
+            throw new TypeError(this._messenger.getMessage({
+                msg: 'noDirection'
+            }));
+        }
+
+        if (typeof f !== 'string') {
+            throw new TypeError(this._messenger.getMessage({
+                msg: 'directionInvalid'
+            }));
+        }
+
+        var _f = f.toUpperCase(),
+            _x = parseInt(x),
+            _y = parseInt(y);
+
+        if (!Number.isInteger(_x) || !Number.isInteger(_y)) {
+            throw new TypeError(this._messenger.getMessage({
+                msg: 'posNotNum'
+            }));
+        }
+
+        if (_x < 0 || _y < 0) {
+            throw new TypeError(this._messenger.getMessage({
+                msg: 'negativePos'
+            }));
+        }
+
+        if (!this._isDirectionValid(_f)) {
+            throw new TypeError(this._messenger.getMessage({
+                msg: 'wrondDirection'
+            }));
+        }
+
+        return {
+            x: _x,
+            y: _y,
+            f: _f
+        };
+    },
+
+    // check if the direction is valid
+    _isDirectionValid: function(sFace) {
+        return this._config.rDirections.indexOf(sFace) !== -1;
+    },
+
+    // check if robot will fall
+    _isFalling: function(x, y) {
+        return this._table.isFalling(x, y);
+    },
+
+    // update the robot position
+    _updateRobotPosition: function(x, y, f) {
+        this._robotCurrentPosition.x = x,
+        this._robotCurrentPosition.y = y,
+        this._robotCurrentPosition.f = this._config
+            .rDirections.indexOf(f);
+    },
+
     // function to fetch the robots current position
     _getRobotPosition: function() {
         return {
@@ -108,11 +197,6 @@ var prototype = {
         };
     },
 
-    /* get messenger
-    getMessenger: function() {
-        return this._messenger;
-    },
-    */
 };
 
 TheRobot.prototype = Object.create(prototype);

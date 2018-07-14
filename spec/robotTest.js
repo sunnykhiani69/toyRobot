@@ -50,7 +50,6 @@ describe('The Toy Robot', function() {
         theRobot.place(x, y, f);
 
         expect(theRobot.report()).toEqual(messenger.getMessage({
-            msg: 'robotPosition',
             x: x,
             y: y,
             f: f.toUpperCase()
