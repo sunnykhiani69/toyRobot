@@ -87,7 +87,7 @@ var prototype = {
             break;
         }
 
-        // make sure step is in table
+        // make sure step is on table
         if (this._isFalling(x,y)) {
             return new Error(this._messenger.getMessage({
                 msg: 'placeFall'
@@ -133,10 +133,23 @@ var prototype = {
             }));
         }
         this._robotCurrentPosition.f =
-            (this._robotCurrentPosition.f - 1) < 0 ?
+            (this._robotCurrentPosition.f - 1) < 0 ? // works if the directions are defined in clockwise
                 3 : this._robotCurrentPosition.f - 1;
         return this;
     },
+
+    right: function() {
+        if (!this._hasPlacedCommand) {
+            return new Error(this._messenger.getMessage({
+                msg: 'noInitCommand'
+            }));
+        }
+        this._robotCurrentPosition.f =
+            (this._robotCurrentPosition.f + 1) > 3 ?
+                0 : this._robotCurrentPosition.f + 1;
+        return this;
+    },
+
 
     // validate place command coordinates
     _validateInput: function(x, y, f) {

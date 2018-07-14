@@ -56,7 +56,7 @@ describe('The Toy Robot', function() {
         }));
     });
 
-// problem test case 1
+    // problem test case 1
 
     it('should report its position', function() {
 
@@ -126,6 +126,33 @@ describe('The Toy Robot', function() {
             f: 'NORTH'
         }));
         console.log('TEST CASE C PASSES');
+    });
+
+    // problem test case 3
+
+    it('should report its position', function() {
+
+        //vars
+
+        var x = 1,
+            y = 2,
+            f = 'east';
+
+        //actions
+
+        theRobot.place(x, y, f);
+        theRobot.move();
+        theRobot.move();
+        theRobot.left();
+        theRobot.move();
+        theRobot.right();
+
+        expect(theRobot.report()).toEqual(messenger.getMessage({
+            x: 3,
+            y: 3,
+            f: 'EAST'
+        }));
+        console.log('TEST CASE RIGHT PASSES');
     });
 
 });
