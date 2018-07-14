@@ -49,6 +49,7 @@ describe('The Toy Robot', function() {
         theRobot.place(x, y, f);
 
         expect(theRobot.report()).toEqual(messenger.getMessage({
+            msg: 'robotPosition',
             x: x,
             y: y,
             f: f.toUpperCase()
@@ -71,6 +72,7 @@ describe('The Toy Robot', function() {
         theRobot.move();
 
         expect(theRobot.report()).toEqual(messenger.getMessage({
+            msg: 'robotPosition',
             x: 0,
             y: 1,
             f: f.toUpperCase()
@@ -94,6 +96,7 @@ describe('The Toy Robot', function() {
         theRobot.left();
 
         expect(theRobot.report()).toEqual(messenger.getMessage({
+            msg: 'robotPosition',
             x: 0,
             y: 0,
             f: 'WEST'
@@ -120,6 +123,7 @@ describe('The Toy Robot', function() {
         theRobot.move();
 
         expect(theRobot.report()).toEqual(messenger.getMessage({
+            msg: 'robotPosition',
             x: 3,
             y: 3,
             f: 'NORTH'
@@ -147,6 +151,7 @@ describe('The Toy Robot', function() {
         theRobot.right();
 
         expect(theRobot.report()).toEqual(messenger.getMessage({
+            msg: 'robotPosition',
             x: 3,
             y: 3,
             f: 'EAST'
