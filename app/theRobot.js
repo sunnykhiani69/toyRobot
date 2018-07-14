@@ -21,7 +21,6 @@ function TheRobot(config, table, messenger) {
         y: undefined,
         f: undefined
     };
-
 }
 
 var prototype = {
@@ -58,6 +57,48 @@ var prototype = {
         return this;
     },
 
+    move: function(){
+        var x,y,f;
+
+        // is the PLACE command made
+        if (!this._hasPlacedCommand){
+
+            return new Error(
+                this._messenger.getMessage({ msg: 'noInitCommand'})
+            );
+        }
+
+        this._robotCurrentPosition = {
+            x: x,
+            y: y,
+            f: f
+        };
+
+        // update x & y correctly
+
+        switch(f) {
+        case 0: ++y; // move north
+            break;
+        case 1: ++x; // move east (right)
+            break;
+        case 2: --y; // move south
+            break;
+        case 3: --x; // move west (left)
+            break;
+        }
+
+        // make sure step is in table
+        if (this._isFalling(x,y)) {
+            return new Error(this._messenger.getMessage({
+                msg: 'placeFall'
+            }));
+        }
+
+        // places the robot if place command is valid
+        this._updateRobotPosition(x, y, this._config.f.rDirections[f]);
+
+    },
+
     // function to fetch the robots current position
     _getRobotPosition: function() {
         return {
@@ -67,6 +108,11 @@ var prototype = {
         };
     },
 
+    /* get messenger
+    getMessenger: function() {
+        return this._messenger;
+    },
+    */
 };
 
 TheRobot.prototype = Object.create(prototype);

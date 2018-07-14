@@ -22,7 +22,7 @@ describe('The Toy Robot', function() {
     beforeEach(function() {
         theRobot = new TheRobot(config.robot,
             new TheTable(config.table),
-            Messenger);
+            messenger);
     });
 
     it('should be undefined before PLACE command', function() {
@@ -30,7 +30,7 @@ describe('The Toy Robot', function() {
         expect(rPosition.x === undefined &&
             rPosition.y === undefined &&
             rPosition.f === undefined).toBe(true);
-        console.log('condition robot is undefined');
+        console.log('condition robot is undefined: pass');
     });
 
     it(
@@ -38,8 +38,9 @@ describe('The Toy Robot', function() {
         function() {
             expect(theRobot.move()).toEqual(new Error(
                 messenger.getMessage({
-                    msg: 'noIniitCommand'
+                    msg: 'noInitCommand'
                 })));
+            console.log('noInitCommand: pass');
         });
 
 });
