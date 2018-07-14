@@ -171,8 +171,8 @@ var prototype = {
     },
 
     // check if the direction is valid
-    _isDirectionValid: function(sFace) {
-        return this._config.rDirections.indexOf(sFace) !== -1;
+    _isDirectionValid: function(_f) {
+        return this._config.rDirections.indexOf(_f) !== -1;
     },
 
     // check if robot will fall

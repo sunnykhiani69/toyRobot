@@ -56,5 +56,77 @@ describe('The Toy Robot', function() {
         }));
     });
 
+    // Test specifics to REA CASE 1
+
+    it('should report its position', function() {
+
+        //vars
+
+        var x = 0,
+            y = 0,
+            f = 'north';
+
+        //actions
+
+        theRobot.place(x, y, f);
+        theRobot.move();
+
+        expect(theRobot.report()).toEqual(messenger.getMessage({
+            x: 0,
+            y: 1,
+            f: f.toUpperCase()
+        }));
+        console.log('REA TEST CASE A PASSES');
+    });
+
+    // Test specifics to REA CASE 2
+
+    it('should report its position', function() {
+
+        //vars
+
+        var x = 0,
+            y = 0,
+            f = 'north';
+
+        //actions
+
+        theRobot.place(x, y, f);
+        theRobot.left();
+
+        expect(theRobot.report()).toEqual(messenger.getMessage({
+            x: 0,
+            y: 0,
+            f: 'WEST'
+        }));
+        console.log('REA TEST CASE B PASSES');
+    });
+
+    // Test specifics to REA CASE 3
+
+    it('should report its position', function() {
+
+        //vars
+
+        var x = 1,
+            y = 2,
+            f = 'east';
+
+        //actions
+
+        theRobot.place(x, y, f);
+        theRobot.move();
+        theRobot.move();
+        theRobot.left();
+        theRobot.move();
+
+        expect(theRobot.report()).toEqual(messenger.getMessage({
+            x: 3,
+            y: 3,
+            f: 'NORTH'
+        }));
+        console.log('REA TEST CASE C PASSES');
+    });
+
 });
 
