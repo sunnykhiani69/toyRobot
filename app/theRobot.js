@@ -95,7 +95,7 @@ var prototype = {
         }
 
         // places the robot if place command is valid
-        this._updateRobotPosition(x, y, this._config.f.rDirections[f]);
+        this._updateRobotPosition(x, y, this._config.rDirections[f]);
 
     },
 
@@ -124,6 +124,18 @@ var prototype = {
         } else
             return this._messenger.getMessage(msgObj);
 
+    },
+
+    left: function() {
+        if (!this._hasPlacedCommand) {
+            return new Error(this._messenger.getMessage({
+                msg: 'noInitCommand'
+            }));
+        }
+        this._robotCurrentPosition.f =
+            (this._robotCurrentPosition.f - 1) < 0 ?
+                3 : this._robotCurrentPosition.f - 1;
+        return this;
     },
 
     // validate place command coordinates

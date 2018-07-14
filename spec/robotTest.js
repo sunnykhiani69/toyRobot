@@ -45,7 +45,7 @@ describe('The Toy Robot', function() {
     it('should report its position upon valid place command', function() {
         var x = 2,
             y = 3,
-            f = 'south';
+            f = 'west';
 
         theRobot.place(x, y, f);
 
@@ -56,11 +56,11 @@ describe('The Toy Robot', function() {
         }));
     });
 
-    // Test specifics to REA CASE 1
+// problem test case 1
 
     it('should report its position', function() {
 
-        //vars
+    //vars
 
         var x = 0,
             y = 0,
@@ -76,14 +76,14 @@ describe('The Toy Robot', function() {
             y: 1,
             f: f.toUpperCase()
         }));
-        console.log('REA TEST CASE A PASSES');
+        console.log('TEST CASE A PASSES');
     });
 
-    // Test specifics to REA CASE 2
+    // problem test case 2
 
     it('should report its position', function() {
 
-        //vars
+    //vars
 
         var x = 0,
             y = 0,
@@ -99,10 +99,10 @@ describe('The Toy Robot', function() {
             y: 0,
             f: 'WEST'
         }));
-        console.log('REA TEST CASE B PASSES');
+        console.log('TEST CASE B PASSES');
     });
 
-    // Test specifics to REA CASE 3
+    // problem test case 3
 
     it('should report its position', function() {
 
@@ -125,7 +125,7 @@ describe('The Toy Robot', function() {
             y: 3,
             f: 'NORTH'
         }));
-        console.log('REA TEST CASE C PASSES');
+        console.log('TEST CASE C PASSES');
     });
 
 });
