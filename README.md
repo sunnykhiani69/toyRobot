@@ -1,9 +1,13 @@
 # Table Of Contents
 
 [Problem Statement & Deliverables](#problem)
+
 [Inital Toughts](#inital)
+
 [Application Plumbing](#application)
+
 [Installation & dependencies](#installation)
+
 [Operaating & testing](#Operaating)
 
 ## Problem Statement & Deliverables
