@@ -33,15 +33,29 @@ describe('The Toy Robot', function() {
         console.log('condition robot is undefined: pass');
     });
 
-    it(
-        'should not accept MOVE command before initial PLACE command',
+    it('should not accept MOVE command before initial PLACE command',
         function() {
             expect(theRobot.move()).toEqual(new Error(
                 messenger.getMessage({
                     msg: 'noInitCommand'
                 })));
-            console.log('noInitCommand: pass');
+            console.log('noInitCommand before move: pass');
         });
+
+    it('should report its position upon valid place command', function() {
+        var x = 2,
+            y = 3,
+            f = 'south';
+
+        theRobot.place(x, y, f);
+
+        expect(theRobot.report()).toEqual(messenger.getMessage({
+            msg: 'robotPosition',
+            x: x,
+            y: y,
+            f: f.toUpperCase()
+        }));
+    });
 
 });
 
