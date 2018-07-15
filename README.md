@@ -1,6 +1,6 @@
 # Table Of Contents
 
-[Problem Statement & Deliverables](#problem)
+[Problem Statement & Deliverables](##Problem)
 
 [Application Plumbing](#application)
 
@@ -137,4 +137,4 @@ spec                    # This folder has the testing files used for the applica
 
 -----------
 
-#### The application consists of 5 components as below
+#### The application consists of 5 components as belo
