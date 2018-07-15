@@ -2,8 +2,6 @@
 
 [Problem Statement & Deliverables](#problem)
 
-[Inital Toughts](#inital)
-
 [Application Plumbing](#application)
 
 [Installation & dependencies](#installation)
@@ -107,3 +105,36 @@ developing your solution.
 Please engineer your solution to a standard you consider suitable for
 production. It is not required to provide any graphical output showing the
 movement of the toy robot.
+
+## Application Plumbing
+
+### Environment
+
+-----------
+
+- The application is a cross-platform command line executable application done in NodeJS. It is able to run on Linux, Mac OSX & Windows without configuration changes
+
+### File structure & description
+
+-----------
+
+app                     # This folder consists of all the files that make up the application
+|-messenger.js          -
+|-tableTop.js           -
+|-theRobot.js           -
+|-theRobotApp.js        -
+|-toyRobotCreator.js    -
+
+config                  # This folder has the configuration required for the application
+|-default.json          -
+
+spec                    # This folder has the testing files used for the application
+|-messageTest.js        -
+|-robotTest.js          -
+|-tableTest.js          -
+
+### Components
+
+-----------
+
+#### The application consists of 5 components as below
