@@ -118,11 +118,11 @@ movement of the toy robot.
 
 -----------
 
-- /app/
+    /app/
 
 This is the folder where the modules for the app resides
 
-- /app/messenger.js
+    /app/messenger.js
 
 This is the module which communicates the messsages from the robot to the user. Tt only has one public method getMessage(msgConfigObj) which returns a parsed message to the user on start, report & robot out of table. The configutation for the messenger is stored in /config/default.json as config.messages.
 
