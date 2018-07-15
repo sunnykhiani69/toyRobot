@@ -4,7 +4,7 @@
 
 [Application Plumbing](#application-plumbing)
 
-[Installation & dependencies](##installation--dependencies)
+[Installation & dependencies](#installation--dependencies)
 
 [Operating & testing](#operating--testing)
 
@@ -208,6 +208,7 @@ To run the application you will need:
     NodeJS - https://nodejs.org/en/download/
     npm - https://www.npmjs.com/
     jasmine-npm - https://github.com/jasmine/jasmine-npm
+    mpm-config - https://www.npmjs.com/package/config
 
 ## Operating & testing
 
@@ -285,4 +286,89 @@ Sample output as below:
 
 -----------
 
+The robot comes with 3 main testing suites which helped to develop this application using BDD techniques.
 
+The test suites are as:
+
+- messageTest
+- robotTest
+- tableTest
+
+They can be run individually as :
+
+    issue "npm test .\spec\messageTest.js" to test the messages
+    issue "npm test .\spec\robotTest.js" to test the robot
+    issue "npm test .\spec\tableTest.js" to test the table
+
+Ideally the whole test suite can be run upon issuing the command "npm test"
+
+Sample output of npm test as below"
+
+    PS C:\nodejs\toyRobot> npm test
+
+    > toyrobot@1.0.0 test C:\nodejs\toyRobot
+    > jasmine
+
+    default
+    placeFall
+    noInitCommand
+    welcome
+    fileNotFound
+    robotPosition
+    x is  -1
+    x is  5
+    x is  -1
+    x is  5
+    x is  -1
+    x is  5
+    x is  -1
+    x is  5
+    x is  -1
+    x is  5
+    x is  0
+    x is  4
+    x is  0
+    x is  4
+    x is  0
+    x is  4
+    x is  0
+    x is  4
+    x is  0
+    x is  4
+    y is  -1
+    y is  5
+    y is  -1
+    y is  5
+    y is  -1
+    y is  5
+    y is  -1
+    y is  5
+    y is  -1
+    y is  5
+    y is  0
+    y is  4
+    y is  0
+    y is  4
+    y is  0
+    y is  4
+    y is  0
+    y is  4
+    y is  0
+    y is  4
+    Randomized with seed 82003
+    Started
+    condition robot is undefined: pass
+    .noInitCommand before move: pass
+    .TEST CASE B PASSES
+    .TEST CASE RIGHT PASSES
+    .TEST CASE C PASSES
+    ..TEST CASE A PASSES
+    ...............................................
+
+
+    53 specs, 0 failures
+    Finished in 0.043 seconds
+    Randomized with seed 82003 (jasmine --random=true --seed=82003)
+    PS C:\nodejs\toyRobot>
+
+Thats all folks. For any questions or clarifications do reach out to me at webhoop@gmail.com.
