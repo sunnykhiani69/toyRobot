@@ -1,8 +1,8 @@
 # Table Of Contents
 
-[Problem Statement & Deliverables](##Problem)
+[Problem Statement & Deliverables](#problem-statement--deliverables)
 
-[Application Plumbing](#application)
+[Application Plumbing](#application-plumbing)
 
 [Installation & dependencies](#installation)
 
@@ -118,20 +118,20 @@ movement of the toy robot.
 
 -----------
 
-- /app                        # This folder consists of all the files that make up the application
-- app/messenger.js            -
-- app/tableTop.js             -
-- app/theRobot.js             -
-- app/theRobotApp.js          -
-- app/toyRobotCreator.js      -
+- /app/
+- /app/messenger.js
+- /app/tableTop.js
+- /app/theRobot.js
+- /app/theRobotApp.js
+- /app/toyRobotCreator.js
 
-config                      # This folder has the configuration required for the application
-|-default.json              -
+- /config/
+- /config/default.json
 
-spec                        # This folder has the testing files used for the application
-|-messageTest.js            -
-|-robotTest.js              -
-|-tableTest.js              -
+- /spec/
+- /spec/messageTest.js
+- /spec/robotTest.js
+- /spec/tableTest.js
 
 ### Components
 

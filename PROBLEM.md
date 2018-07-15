@@ -50,7 +50,7 @@ Constraints
 Example Input and Output
 ------------------------
 
-### Example a
+## Example a
 
     PLACE 0,0,NORTH
     MOVE
