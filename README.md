@@ -118,20 +118,20 @@ movement of the toy robot.
 
 -----------
 
-app                     # This folder consists of all the files that make up the application
-|-messenger.js          -
-|-tableTop.js           -
-|-theRobot.js           -
-|-theRobotApp.js        -
-|-toyRobotCreator.js    -
+*app                        # This folder consists of all the files that make up the application
+**|-messenger.js            -
+**|-tableTop.js             -
+**|-theRobot.js             -
+**|-theRobotApp.js          -
+**|-toyRobotCreator.js      -
 
-config                  # This folder has the configuration required for the application
-|-default.json          -
+config                      # This folder has the configuration required for the application
+|-default.json              -
 
-spec                    # This folder has the testing files used for the application
-|-messageTest.js        -
-|-robotTest.js          -
-|-tableTest.js          -
+spec                        # This folder has the testing files used for the application
+|-messageTest.js            -
+|-robotTest.js              -
+|-tableTest.js              -
 
 ### Components
 
