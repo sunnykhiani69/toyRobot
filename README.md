@@ -211,6 +211,78 @@ To run the application you will need:
 
 ## Operating & testing
 
+### Operating the robot
+
+-----------
+
+To operate the robot via command line input:
+
+    ensure you are in the folder of the robot and all dependencies are installed
+
+    issue "npm start" on prompt
+
+    The robot will prompt with a welcome message and instructions to place the robot
+
+    issue "place 1,2,west"
+
+    The robot will place if the above command complies with the boundries of the table
+
+    The robot accepts commands such as PLACE, MOVE, LEFT, RIGHT, REPORT. A valid PLACE command must be issued before any other commands are sent to the robot.
+
+    The quite the robot simply issue "q" or "quit".
+
+Sample input and outputs as below:
+
+    > toyrobot@1.0.0 start C:\nodejs\toyRobot
+    > node index.js
+
+    Please start by issuing a PLACE command like PLACE 0,0,NORTH
+    >place 1,2,west
+    > move
+    > move
+    Please place the robot where it will not fall
+    > report
+    The robots position is 0 2 WEST
+    >
+
+To operate the robot text file of instructions:
+
+    issue "npm start <filename>"
+
+    The example text file that comes with this project has all of the tests defined in the problem statement and is located as tests.txt
+
+    To execute the tests, issue command "npm start tests.txt"
+
+    You may modify the text file or add any new files you want.
+
+Sample output as below:
+
+    PS C:\nodejs\toyRobot> npm start tests.txt
+
+    > toyrobot@1.0.0 start C:\nodejs\toyRobot
+    > node index.js "tests.txt"
+
+    Please start by issuing a PLACE command like PLACE 0,0,NORTH
+    >PLACE 0,0,NORTH
+    > MOVE
+    > REPORT
+    The robots position is 0 1 NORTH
+    > PLACE 0,0,NORTH
+    > LEFT
+    > REPORT
+    The robots position is 0 0 WEST
+    > PLACE 1,2,EAST
+    > MOVE
+    > MOVE
+    > LEFT
+    > MOVE
+    > REPORT
+    The robots position is 3 3 NORTH
+    >
+    PS C:\nodejs\toyRobot>
+
+### Testing the robot
+
 -----------
 
 
