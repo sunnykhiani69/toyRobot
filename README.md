@@ -118,12 +118,12 @@ movement of the toy robot.
 
 -----------
 
-*app                        # This folder consists of all the files that make up the application
-**|-messenger.js            -
-**|-tableTop.js             -
-**|-theRobot.js             -
-**|-theRobotApp.js          -
-**|-toyRobotCreator.js      -
+- /app                        # This folder consists of all the files that make up the application
+- app/messenger.js            -
+- app/tableTop.js             -
+- app/theRobot.js             -
+- app/theRobotApp.js          -
+- app/toyRobotCreator.js      -
 
 config                      # This folder has the configuration required for the application
 |-default.json              -
