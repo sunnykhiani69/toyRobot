@@ -197,7 +197,7 @@ To install the application git/svn checkout with the below url:
     https://github.com/sunnykhiani69/toyRobot.git
     or git clone git@github.com:sunnykhiani69/toyRobot.git
 
-Then cd to the directory to npm start the application, however the application has a few dependencies such as below:
+Then cd to the directory where the project was downloaded and issue "npm install" to install the application, however the application has a few dependencies such as below:
 
 ### Dependencies
 
