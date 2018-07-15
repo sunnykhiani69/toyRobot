@@ -194,10 +194,11 @@ This test checks to see if the points x,y are in or out of the table.
 
 To install the application git/svn checkout with the below url:
 
-    https://github.com/sunnykhiani69/toyRobot.git
-    or git clone git@github.com:sunnykhiani69/toyRobot.git
+https://github.com/sunnykhiani69/toyRobot.git
 
-Then cd to the directory where the project was downloaded and issue "npm install" to install the application, however the application has a few dependencies such as below:
+- git clone https://github.com/sunnykhiani69/toyRobot.git or download the directory
+- cd toyRobot
+- npm install
 
 ### Dependencies
 
