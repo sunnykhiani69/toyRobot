@@ -21,12 +21,16 @@ var
 stdin.setEncoding('utf8');
 stdout.setEncoding('utf8');
 process.title = 'The Toy Robot';
-argv = process.argv.slice(2);
+argv = process.argv.slice(2); // omit the commands and get only filename
 
+
+// this is to readline in command prompt
 stdin.on('data', function(data) {
     doOutput(data);
 });
 
+
+// to ingest the file of commands
 if (argv.length) {
     try {
         fs.accessSync(argv[0], fs.F_OK || fs.R_OK);
