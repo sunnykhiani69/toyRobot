@@ -194,9 +194,9 @@ This test checks to see if the points x,y are in or out of the table.
 
 To install the application git/svn checkout with the below url:
 
-https://github.com/sunnykhiani69/toyRobot.git
+    URL: <https://github.com/sunnykhiani69/toyRobot.git>
 
-- git clone https://github.com/sunnykhiani69/toyRobot.git or download the directory
+- git clone <https://github.com/sunnykhiani69/toyRobot.git> or download the directory
 - cd toyRobot
 - npm install
 
@@ -206,10 +206,10 @@ https://github.com/sunnykhiani69/toyRobot.git
 
 To run the application you will need:
 
-    NodeJS - https://nodejs.org/en/download/
-    npm - https://www.npmjs.com/
-    jasmine-npm - https://github.com/jasmine/jasmine-npm
-    mpm-config - https://www.npmjs.com/package/config
+    NodeJS - <https://nodejs.org/en/download/>
+    npm - <https://www.npmjs.com/>
+    jasmine-npm - <https://github.com/jasmine/jasmine-npm>
+    mpm-config - <https://www.npmjs.com/package/config>
 
 ## Operating & testing
 
@@ -232,6 +232,18 @@ To operate the robot via command line input:
     The robot accepts commands such as PLACE, MOVE, LEFT, RIGHT, REPORT. A valid PLACE command must be issued before any other commands are sent to the robot.
 
     The quite the robot simply issue "q" or "quit".
+
+Robot COMMANDS
+
+- PLACE X,Y,F where X is the cordinate X and Y is cordinate Y and F is position robot is facing i.e. NORTH, EAST, SOUTH, WEST
+
+- The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. The application will discard all commands in the sequence until a valid PLACE command has been executed.
+
+- MOVE will move the toy robot one unit forward in the direction it is currently facing.
+
+- LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
+
+- REPORT will announce the X,Y and F of the robot.
 
 Sample input and outputs as below:
 
