@@ -82,7 +82,7 @@ function robotAction(rCommand) {
 function doOutput(data) {
     var res, _data = data.trim();
 
-    if (_data.match(/(q|quit|exit)/i))
+    if (_data.match(/(q|quit|exit|bye)/i))
         process.exit();
 
     res = robotAction(_data);
