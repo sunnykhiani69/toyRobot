@@ -4,9 +4,9 @@
 
 [Application Plumbing](#application-plumbing)
 
-[Installation & dependencies](#installation-dependencies)
+[Installation & dependencies](##installation--dependencies)
 
-[Operating & testing](#Operaating)
+[Operating & testing](#operating--testing)
 
 ## Problem Statement & Deliverables
 
@@ -188,8 +188,29 @@ This test checks to see if the points x,y are in or out of the table.
 
 ## Installation & dependencies
 
+### Installation
+
 -----------
+
+To install the application git/svn checkout with the below url:
+
+    https://github.com/sunnykhiani69/toyRobot.git
+    or git clone git@github.com:sunnykhiani69/toyRobot.git
+
+Then cd to the directory to npm start the application, however the application has a few dependencies such as below:
+
+### Dependencies
+
+-----------
+
+To run the application you will need:
+
+    NodeJS - https://nodejs.org/en/download/
+    npm - https://www.npmjs.com/
+    jasmine-npm - https://github.com/jasmine/jasmine-npm
 
 ## Operating & testing
 
 -----------
+
+
